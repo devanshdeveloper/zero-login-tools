@@ -99,7 +99,7 @@ function validateRegistry() {
   });
 
   // 8. Check for unused categories
-  const usedCategories = new Set(tools.map((t) => t.category));
+  const usedCategories = new Set<string>(tools.map((t) => t.category));
   categories.forEach((cat) => {
     // We only care about leaf categories (those not used as parentId) being used,
     // or we can just list them as a warning.
