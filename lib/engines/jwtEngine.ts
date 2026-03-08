@@ -1,6 +1,6 @@
 export interface JwtData {
-  header: any;
-  payload: any;
+  header: Record<string, unknown> | null;
+  payload: Record<string, unknown> | null;
   signature: string;
   isValid: boolean;
   error?: string;
@@ -34,7 +34,7 @@ export function decodeJwt(token: string): JwtData {
       signature: parts[2],
       isValid: true,
     };
-  } catch (err: any) {
+  } catch {
     return {
       header: null,
       payload: null,

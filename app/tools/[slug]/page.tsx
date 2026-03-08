@@ -75,10 +75,71 @@ export default async function ToolPage({
   const ToolComponent = tool.component;
   const blocks = tool.contentBlocks || {};
 
+  const howToUseBlock =
+    blocks.howToUse ??
+    ({
+      title: `How to use ${tool.name}`,
+      content: (
+        <>
+          <p>
+            Open the tool, paste or upload your input, choose any options, and
+            copy or download the output.
+          </p>
+          <ol>
+            <li>Provide input (text, code, or a file) in the tool UI.</li>
+            <li>Adjust settings (if available) to match your needs.</li>
+            <li>Click the action button (or type) to generate the result.</li>
+            <li>Copy or download the output.</li>
+          </ol>
+        </>
+      ),
+    } as const);
+
+  const howItWorksBlock =
+    blocks.howItWorks ??
+    ({
+      title: `How ${tool.name} works`,
+      content: (
+        <>
+          <p>
+            This tool runs entirely in your browser. It processes your input
+            locally using client-side JavaScript and generates an output you can
+            copy or download.
+          </p>
+          <p>
+            No accounts, no uploads, and no server-side processing are required.
+          </p>
+        </>
+      ),
+    } as const);
+
+  const faqBlock =
+    blocks.faq ??
+    ({
+      title: "FAQ",
+      faqs: [
+        {
+          question: "Is my data uploaded to your servers?",
+          answer:
+            "No. All processing happens in your browser. Your data stays on your device.",
+        },
+        {
+          question: "What are the limits?",
+          answer:
+            "Limits depend on your browser and device memory. Very large inputs may be slow or fail in low-memory environments.",
+        },
+        {
+          question: "Can I use this tool offline?",
+          answer:
+            "Yes, after the page is loaded once, most tools continue to work offline as long as required scripts are available in your browser cache.",
+        },
+      ],
+    } as const);
+
   // Resolve related tools
   const relatedToolsLinks = tool.relatedTools
     .map((relSlug: string) => getToolBySlug(relSlug))
-    .filter((t: any): t is NonNullable<typeof t> => t !== undefined)
+    .filter((t): t is NonNullable<ReturnType<typeof getToolBySlug>> => t !== undefined)
     .map((t: NonNullable<ReturnType<typeof getToolBySlug>>) => ({
       name: t!.name,
       href: `/tools/${t!.slug}`,
@@ -125,18 +186,12 @@ export default async function ToolPage({
         )}
 
         {/* 5. HowToUse */}
-        {blocks.howToUse && (
-          <HowToUse title={blocks.howToUse.title}>
-            {blocks.howToUse.content}
-          </HowToUse>
-        )}
+        <HowToUse title={howToUseBlock.title}>{howToUseBlock.content}</HowToUse>
 
         {/* 6. HowItWorks */}
-        {blocks.howItWorks && (
-          <HowItWorks title={blocks.howItWorks.title}>
-            {blocks.howItWorks.content}
-          </HowItWorks>
-        )}
+        <HowItWorks title={howItWorksBlock.title}>
+          {howItWorksBlock.content}
+        </HowItWorks>
 
         {/* 7. ToolBenefits */}
         {blocks.benefits && (
@@ -161,9 +216,7 @@ export default async function ToolPage({
         />
 
         {/* 10. ToolFAQ */}
-        {blocks.faq && (
-          <ToolFAQ faqs={blocks.faq.faqs} title={blocks.faq.title} />
-        )}
+        <ToolFAQ faqs={faqBlock.faqs} title={faqBlock.title} />
 
         {/* 11. RelatedTools */}
         {relatedToolsLinks.length > 0 && (

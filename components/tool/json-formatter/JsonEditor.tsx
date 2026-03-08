@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { formatJson, minifyJson } from "@/lib/engines/jsonFormatterEngine";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -12,13 +12,6 @@ export function JsonEditor() {
   const [output, setOutput] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
-  const [autoFormat, setAutoFormat] = useState(false);
-
-  useEffect(() => {
-    if (autoFormat && input) {
-      handleFormat();
-    }
-  }, [input, autoFormat]);
 
   const handleFormat = () => {
     const res = formatJson(input, 2);

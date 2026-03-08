@@ -17,8 +17,12 @@ export function formatJson(input: string, space: number = 2): JsonFormatResult {
       lines: formatted.split("\n").length,
       size: new Blob([formatted]).size,
     };
-  } catch (err: any) {
-    return { success: false, value: input, error: err.message };
+  } catch (err: unknown) {
+    return {
+      success: false,
+      value: input,
+      error: err instanceof Error ? err.message : String(err),
+    };
   }
 }
 

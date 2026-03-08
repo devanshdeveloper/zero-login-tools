@@ -1,20 +1,21 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { convertColor, ColorData } from "@/lib/engines/colorEngine";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Copy, Check } from "lucide-react";
 
+const DEFAULT_COLOR = "#3b82f6";
+
 export function ColorConverter() {
   const [input, setInput] = useState("#3B82F6");
-  const [data, setData] = useState<ColorData>(convertColor("#3b82f6"));
   const [copiedField, setCopiedField] = useState<string | null>(null);
 
-  useEffect(() => {
+  const data: ColorData = useMemo(() => {
     const res = convertColor(input);
-    if (res.isValid) setData(res);
+    return res.isValid ? res : convertColor(DEFAULT_COLOR);
   }, [input]);
 
   const handleCopy = (text: string, fieldName: string) => {

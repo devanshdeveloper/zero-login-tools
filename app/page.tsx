@@ -1,9 +1,8 @@
-import { tools } from "@/lib/tools/tool-registry";
+import { toolSummaries } from "@/lib/tools/tool-registry";
 import { categories } from "@/data/categories";
 import { HomeSearch } from "@/components/home/HomeSearch";
 import { ToolCard } from "@/components/ui/ToolCard";
 import { Metadata } from "next";
-import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "ZeroLoginTools - Free Instant Browser Tools & Web Utilities",
@@ -15,8 +14,8 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const popularTools = tools.filter((t) => t.popular);
-  const newTools = tools.filter((t) => t.new);
+  const popularTools = toolSummaries.filter((t) => t.popular);
+  const newTools = toolSummaries.filter((t) => t.new);
 
   return (
     <div className="container mx-auto px-4 py-12 md:py-24 max-w-6xl space-y-24 mb-16">
@@ -33,7 +32,7 @@ export default function Home() {
           Fully client-side, zero server processing.
         </h2>
         <div className="pt-8">
-          <HomeSearch tools={tools.map(({ component, ...rest }) => rest)} />
+          <HomeSearch tools={toolSummaries} />
         </div>
       </section>
 

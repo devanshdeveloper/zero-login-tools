@@ -28,6 +28,11 @@ export const categories: Category[] = [
     description: "Image Compression, Operations",
   },
   {
+    id: "documents",
+    name: "Documents",
+    description: "PDF and document conversion tools.",
+  },
+  {
     id: "utilities",
     name: "System Utilities",
     description: "Unit conversions, colors, time",
@@ -41,6 +46,12 @@ export const categories: Category[] = [
     parentId: "developer",
   },
   {
+    id: "playground",
+    name: "Playground",
+    description: "Interactive sandboxes and testers.",
+    parentId: "developer",
+  },
+  {
     id: "formatting",
     name: "Formatters",
     description: "JSON, HTML, and Markdown formatting.",
@@ -51,6 +62,18 @@ export const categories: Category[] = [
     name: "Generators",
     description: "Password and UUID generators.",
     parentId: "cryptography",
+  },
+  {
+    id: "security",
+    name: "Security",
+    description: "Security utilities that run locally in your browser.",
+    parentId: "cryptography",
+  },
+  {
+    id: "image",
+    name: "Image Tools",
+    description: "Resizing, cropping, palettes, and more.",
+    parentId: "media",
   },
   {
     id: "converters",

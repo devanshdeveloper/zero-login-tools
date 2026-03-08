@@ -4,7 +4,7 @@ import { useState } from "react";
 import { encodeBase64, decodeBase64 } from "@/lib/engines/base64Engine";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Check, Copy, ArrowRightLeft } from "lucide-react";
+import { Check, Copy } from "lucide-react";
 
 export function Base64Editor() {
   const [input, setInput] = useState("");

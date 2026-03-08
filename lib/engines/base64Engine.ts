@@ -12,7 +12,7 @@ export function decodeBase64(input: string): {
 } {
   try {
     return { success: true, value: decodeURIComponent(escape(atob(input))) };
-  } catch (err: any) {
+  } catch {
     return { success: false, value: "Error: Invalid Base64 string" };
   }
 }

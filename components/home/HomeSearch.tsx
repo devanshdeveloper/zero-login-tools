@@ -47,7 +47,7 @@ export function HomeSearch({ tools }: { tools: ToolSummary[] }) {
             </div>
           ) : (
             <div className="p-8 text-center">
-              No tools found matching "{query}"
+              No tools found matching &quot;{query}&quot;
             </div>
           )}
         </div>

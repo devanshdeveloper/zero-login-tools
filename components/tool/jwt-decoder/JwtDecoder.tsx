@@ -15,7 +15,7 @@ export function JwtDecoder() {
     setData(decodeJwt(val));
   };
 
-  const getFormatStr = (obj: any) => {
+  const getFormatStr = (obj: Record<string, unknown> | null | undefined) => {
     if (!obj) return "";
     return JSON.stringify(obj, null, 2);
   };

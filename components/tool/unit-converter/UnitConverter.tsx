@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { convertUnit, units, UnitCategory } from "@/lib/engines/unitEngine";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -15,25 +15,21 @@ export function UnitConverter() {
   const [fromUnit, setFromUnit] = useState(categoryUnits[0].id);
   const [toUnit, setToUnit] = useState(categoryUnits[1].id);
   const [fromValue, setFromValue] = useState<string>("1");
-  const [toValue, setToValue] = useState<string>("");
 
-  useEffect(() => {
-    // When category changes, reset units
-    const cats = units.filter((u) => u.category === category);
+  const toValue = useMemo(() => {
+    const val = parseFloat(fromValue);
+    if (isNaN(val)) return "";
+    const result = convertUnit(val, fromUnit, toUnit);
+    return parseFloat(result.toPrecision(12)).toString();
+  }, [fromValue, fromUnit, toUnit]);
+
+  const handleCategoryChange = (val: string) => {
+    const cat = val as UnitCategory;
+    setCategory(cat);
+    const cats = units.filter((u) => u.category === cat);
     setFromUnit(cats[0].id);
     setToUnit(cats[1].id);
-  }, [category]);
-
-  useEffect(() => {
-    const val = parseFloat(fromValue);
-    if (!isNaN(val)) {
-      const result = convertUnit(val, fromUnit, toUnit);
-      // Format cleanly to avoid 1.0000000001 issues
-      setToValue(parseFloat(result.toPrecision(12)).toString());
-    } else {
-      setToValue("");
-    }
-  }, [fromValue, fromUnit, toUnit]);
+  };
 
   const handleSwap = () => {
     setFromUnit(toUnit);
@@ -45,7 +41,7 @@ export function UnitConverter() {
     <div className="p-8 max-w-3xl mx-auto space-y-8">
       <Tabs
         value={category}
-        onValueChange={(val) => setCategory(val as UnitCategory)}
+        onValueChange={handleCategoryChange}
         className="w-full"
       >
         <TabsList className="grid w-full grid-cols-4 h-12">
