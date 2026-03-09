@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { tools } from "@/lib/tools/tool-registry";
+import { allRegistryTools } from "@//registry";
 import { categories } from "@/data/categories";
 
 const BASE_URL = "https://zerologintools.com";
@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Tool routes
-  const toolRoutes: MetadataRoute.Sitemap = tools.map((tool) => ({
+  const toolRoutes: MetadataRoute.Sitemap = allRegistryTools.map((tool: any) => ({
     url: `${BASE_URL}/tools/${tool.slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly",

@@ -1,6 +1,5 @@
 import { ToolLayout } from "@/components/layout/ToolLayout";
-import { tools } from "@/lib/tools/tool-registry";
-import { getToolBySlug } from "@/lib/tools/get-tool";
+import { allRegistryTools, getRegistryTool } from "@/registry";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -20,7 +19,7 @@ import {
 } from "@/components/content";
 
 export function generateStaticParams() {
-  return tools.map((tool) => ({
+  return allRegistryTools.map((tool) => ({
     slug: tool.slug,
   }));
 }
@@ -31,7 +30,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const tool = getToolBySlug(slug);
+  const tool = getRegistryTool(slug);
 
   if (!tool) {
     return {
@@ -66,7 +65,7 @@ export default async function ToolPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const tool = getToolBySlug(slug);
+  const tool = getRegistryTool(slug);
 
   if (!tool) {
     notFound();
@@ -137,10 +136,13 @@ export default async function ToolPage({
     } as const);
 
   // Resolve related tools
-  const relatedToolsLinks = tool.relatedTools
-    .map((relSlug: string) => getToolBySlug(relSlug))
-    .filter((t): t is NonNullable<ReturnType<typeof getToolBySlug>> => t !== undefined)
-    .map((t: NonNullable<ReturnType<typeof getToolBySlug>>) => ({
+  const relatedToolsLinks = (tool.relatedTools || [])
+    .map((relSlug: string) => getRegistryTool(relSlug))
+    .filter(
+      (t): t is NonNullable<ReturnType<typeof getRegistryTool>> =>
+        t !== undefined,
+    )
+    .map((t: NonNullable<ReturnType<typeof getRegistryTool>>) => ({
       name: t!.name,
       href: `/tools/${t!.slug}`,
       description: t!.description,
@@ -166,7 +168,13 @@ export default async function ToolPage({
 
         {/* 2. Tool UI */}
         <div className="bg-card text-card-foreground border-2 border-border shadow-sm p-1 rounded-xl">
-          <ToolComponent />
+          {ToolComponent ? (
+            <ToolComponent />
+          ) : (
+            <div className="p-4 text-center text-muted-foreground">
+              Tool interface not available.
+            </div>
+          )}
         </div>
 
         {/* 3. ToolInstructions */}

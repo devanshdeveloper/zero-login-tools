@@ -1,5 +1,5 @@
 import { categories } from "@/data/categories";
-import { tools } from "@/lib/tools/tool-registry";
+import { allRegistryTools } from "@//registry";
 import { ToolCard } from "@/components/ui/ToolCard";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
@@ -38,8 +38,8 @@ export default async function CategoryPage({
   }
 
   // Find tools that belong directly to this category, OR subcategories
-  const categoryTools = tools.filter(
-    (t) =>
+  const categoryTools = allRegistryTools.filter(
+    (t: import('@/registry/types').RegistryTool) =>
       t.category === category.id ||
       categories.find((c) => c.id === t.category)?.parentId === category.id,
   );
@@ -52,7 +52,7 @@ export default async function CategoryPage({
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {categoryTools.map((t) => (
+        {categoryTools.map((t: import('@/registry/types').RegistryTool) => (
           <ToolCard
             key={t.slug}
             title={t.name}

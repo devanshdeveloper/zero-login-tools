@@ -1,0 +1,153 @@
+﻿app/categories/[slug]/page.tsx(41,25): error TS2304: Cannot find name 'tools'.
+app/categories/[slug]/page.tsx(42,6): error TS7006: Parameter 't' implicitly has an 'any' type.
+app/categories/[slug]/page.tsx(55,29): error TS7006: Parameter 't' implicitly has an 'any' type.
+app/page.tsx(1,10): error TS2305: Module '"@/registry"' has no exported member 'toolSummaries'.
+app/page.tsx(17,46): error TS7006: Parameter 't' implicitly has an 'any' type.
+app/page.tsx(18,42): error TS7006: Parameter 't' implicitly has an 'any' type.
+app/page.tsx(48,32): error TS7006: Parameter 't' implicitly has an 'any' type.
+app/page.tsx(69,30): error TS7006: Parameter 't' implicitly has an 'any' type.
+app/sitemap.ts(19,45): error TS2304: Cannot find name 'tools'.
+app/sitemap.ts(19,56): error TS7006: Parameter 'tool' implicitly has an 'any' type.
+components/home/HomeSearch.tsx(4,10): error TS2305: Module '"@/registry"' has no exported member 'ToolSummary'.
+lib/tools/tool-registry.ts(65,10): error TS2307: Cannot find module '@/components/tool/json-formatter/JsonEditor' or its corresponding type declarations.
+lib/tools/tool-registry.ts(70,10): error TS2307: Cannot find module '@/components/tool/base64-encoder/Base64Editor' or its corresponding type declarations.
+lib/tools/tool-registry.ts(75,10): error TS2307: Cannot find module '@/components/tool/url-encoder/UrlEditor' or its corresponding type declarations.
+lib/tools/tool-registry.ts(80,10): error TS2307: Cannot find module '@/components/tool/uuid-generator/UuidGenerator' or its corresponding type declarations.
+lib/tools/tool-registry.ts(85,10): error TS2307: Cannot find module '@/components/tool/password-generator/PasswordGenerator' or its corresponding type declarations.
+lib/tools/tool-registry.ts(90,10): error TS2307: Cannot find module '@/components/tool/markdown-html/MarkdownEditor' or its corresponding type declarations.
+lib/tools/tool-registry.ts(95,10): error TS2307: Cannot find module '@/components/tool/color-converter/ColorConverter' or its corresponding type declarations.
+lib/tools/tool-registry.ts(100,10): error TS2307: Cannot find module '@/components/tool/jwt-decoder/JwtDecoder' or its corresponding type declarations.
+lib/tools/tool-registry.ts(105,10): error TS2307: Cannot find module '@/components/tool/image-compressor/ImageCompressor' or its corresponding type declarations.
+lib/tools/tool-registry.ts(110,10): error TS2307: Cannot find module '@/components/tool/unit-converter/UnitConverter' or its corresponding type declarations.
+lib/tools/tool-registry.ts(115,10): error TS2307: Cannot find module '@/components/tool/regex-visualizer/RegexVisualizer' or its corresponding type declarations.
+lib/tools/tool-registry.ts(120,10): error TS2307: Cannot find module '@/components/tool/html-minifier/HtmlMinifier' or its corresponding type declarations.
+lib/tools/tool-registry.ts(125,10): error TS2307: Cannot find module '@/components/tool/css-minifier/CssMinifier' or its corresponding type declarations.
+lib/tools/tool-registry.ts(130,10): error TS2307: Cannot find module '@/components/tool/js-minifier/JsMinifier' or its corresponding type declarations.
+lib/tools/tool-registry.ts(135,10): error TS2307: Cannot find module '@/components/tool/diff-checker/DiffChecker' or its corresponding type declarations.
+lib/tools/tool-registry.ts(140,10): error TS2307: Cannot find module '@/components/tool/text-diff-viewer/TextDiffViewer' or its corresponding type declarations.
+lib/tools/tool-registry.ts(146,10): error TS2307: Cannot find module '@/components/tool/text-case-converter/TextCaseConverter' or its corresponding type declarations.
+lib/tools/tool-registry.ts(151,10): error TS2307: Cannot find module '@/components/tool/word-counter/WordCounter' or its corresponding type declarations.
+lib/tools/tool-registry.ts(156,10): error TS2307: Cannot find module '@/components/tool/special-character-picker/SpecialCharacterPicker' or its corresponding type declarations.
+lib/tools/tool-registry.ts(161,10): error TS2307: Cannot find module '@/components/tool/emoji-generator/EmojiGenerator' or its corresponding type declarations.
+lib/tools/tool-registry.ts(166,10): error TS2307: Cannot find module '@/components/tool/annoying-text-generator/AnnoyingTextGenerator' or its corresponding type declarations.
+lib/tools/tool-registry.ts(171,10): error TS2307: Cannot find module '@/components/tool/markdown-preview/MarkdownPreview' or its corresponding type declarations.
+lib/tools/tool-registry.ts(176,10): error TS2307: Cannot find module '@/components/tool/html-to-markdown/HtmlToMarkdown' or its corresponding type declarations.
+lib/tools/tool-registry.ts(181,10): error TS2307: Cannot find module '@/components/tool/text-sorter/TextSorter' or its corresponding type declarations.
+lib/tools/tool-registry.ts(186,10): error TS2307: Cannot find module '@/components/tool/duplicate-line-remover/DuplicateLineRemover' or its corresponding type declarations.
+lib/tools/tool-registry.ts(191,10): error TS2307: Cannot find module '@/components/tool/random-text-generator/RandomTextGenerator' or its corresponding type declarations.
+lib/tools/tool-registry.ts(196,10): error TS2307: Cannot find module '@/components/tool/word-cloud-generator/WordCloudGenerator' or its corresponding type declarations.
+lib/tools/tool-registry.ts(202,10): error TS2307: Cannot find module '@/components/tool/image-resizer/ImageResizer' or its corresponding type declarations.
+lib/tools/tool-registry.ts(207,10): error TS2307: Cannot find module '@/components/tool/image-cropper/ImageCropper' or its corresponding type declarations.
+lib/tools/tool-registry.ts(212,10): error TS2307: Cannot find module '@/components/tool/image-rotator/ImageRotator' or its corresponding type declarations.
+lib/tools/tool-registry.ts(217,10): error TS2307: Cannot find module '@/components/tool/image-metadata-viewer/ImageMetadataViewer' or its corresponding type declarations.
+lib/tools/tool-registry.ts(222,10): error TS2307: Cannot find module '@/components/tool/color-picker/ColorPicker' or its corresponding type declarations.
+lib/tools/tool-registry.ts(227,10): error TS2307: Cannot find module '@/components/tool/palette-generator/PaletteGenerator' or its corresponding type declarations.
+lib/tools/tool-registry.ts(232,10): error TS2307: Cannot find module '@/components/tool/favicon-generator/FaviconGenerator' or its corresponding type declarations.
+lib/tools/tool-registry.ts(237,10): error TS2307: Cannot find module '@/components/tool/background-remover/BackgroundRemover' or its corresponding type declarations.
+lib/tools/tool-registry.ts(242,10): error TS2307: Cannot find module '@/components/tool/image-format-converter/ImageFormatConverter' or its corresponding type declarations.
+lib/tools/tool-registry.ts(247,10): error TS2307: Cannot find module '@/components/tool/gif-resizer/GifResizer' or its corresponding type declarations.
+lib/tools/tool-registry.ts(254,10): error TS2307: Cannot find module '@/components/tool/pdf-split/PdfSplit' or its corresponding type declarations.
+lib/tools/tool-registry.ts(257,10): error TS2307: Cannot find module '@/components/tool/pdf-merge/PdfMerge' or its corresponding type declarations.
+lib/tools/tool-registry.ts(260,10): error TS2307: Cannot find module '@/components/tool/pdf-compress/PdfCompress' or its corresponding type declarations.
+lib/tools/tool-registry.ts(265,10): error TS2307: Cannot find module '@/components/tool/pdf-to-image/PdfToImage' or its corresponding type declarations.
+lib/tools/tool-registry.ts(270,10): error TS2307: Cannot find module '@/components/tool/image-to-pdf/ImageToPdf' or its corresponding type declarations.
+lib/tools/tool-registry.ts(275,10): error TS2307: Cannot find module '@/components/tool/markdown-to-pdf/MarkdownToPdf' or its corresponding type declarations.
+lib/tools/tool-registry.ts(280,10): error TS2307: Cannot find module '@/components/tool/html-to-pdf/HtmlToPdf' or its corresponding type declarations.
+lib/tools/tool-registry.ts(285,10): error TS2307: Cannot find module '@/components/tool/latex-preview/LatexPreview' or its corresponding type declarations.
+lib/tools/tool-registry.ts(290,10): error TS2307: Cannot find module '@/components/tool/simple-text-editor/SimpleTextEditor' or its corresponding type declarations.
+lib/tools/tool-registry.ts(295,10): error TS2307: Cannot find module '@/components/tool/spreadsheet-editor/SpreadsheetEditor' or its corresponding type declarations.
+lib/tools/tool-registry.ts(300,10): error TS2307: Cannot find module '@/components/tool/collaborative-notepad/CollaborativeNotepad' or its corresponding type declarations.
+lib/tools/tool-registry.ts(307,10): error TS2307: Cannot find module '@/components/tool/code-playground/CodePlayground' or its corresponding type declarations.
+lib/tools/tool-registry.ts(312,10): error TS2307: Cannot find module '@/components/tool/js-console-runner/JsConsoleRunner' or its corresponding type declarations.
+lib/tools/tool-registry.ts(317,10): error TS2307: Cannot find module '@/components/tool/python-visualizer/PythonVisualizer' or its corresponding type declarations.
+lib/tools/tool-registry.ts(322,10): error TS2307: Cannot find module '@/components/tool/regex-tester/RegexTester' or its corresponding type declarations.
+lib/tools/tool-registry.ts(327,10): error TS2307: Cannot find module '@/components/tool/sql-formatter/SqlFormatter' or its corresponding type declarations.
+lib/tools/tool-registry.ts(332,10): error TS2307: Cannot find module '@/components/tool/sql-visualizer/SqlVisualizer' or its corresponding type declarations.
+lib/tools/tool-registry.ts(337,10): error TS2307: Cannot find module '@/components/tool/json-api-tester/JsonApiTester' or its corresponding type declarations.
+lib/tools/tool-registry.ts(342,10): error TS2307: Cannot find module '@/components/tool/html-playground/HtmlPlayground' or its corresponding type declarations.
+lib/tools/tool-registry.ts(347,10): error TS2307: Cannot find module '@/components/tool/css-playground/CssPlayground' or its corresponding type declarations.
+lib/tools/tool-registry.ts(352,10): error TS2307: Cannot find module '@/components/tool/color-gradient-generator/ColorGradientGenerator' or its corresponding type declarations.
+registry/tools/developer/diff-checker/components/DiffChecker.tsx(4,10): error TS2305: Module '"@/registry/tools/developer/diff-checker/engine"' has no exported member 'computeDiff'.
+registry/tools/developer/diff-checker/components/DiffChecker.tsx(27,13): error TS7006: Parameter 'diff' implicitly has an 'any' type.
+registry/tools/developer/diff-checker/components/DiffChecker.tsx(162,34): error TS7006: Parameter 'diff' implicitly has an 'any' type.
+registry/tools/developer/diff-checker/components/DiffChecker.tsx(162,40): error TS7006: Parameter 'idx' implicitly has an 'any' type.
+registry/tools/developer/json-formatter/cli.ts(1,10): error TS2305: Module '"./engine"' has no exported member 'runJsonFormatter'.
+registry/tools/developer/json-formatter/render.tsx(2,28): error TS2307: Cannot find module '@/components/tool/json-formatter/JsonEditor' or its corresponding type declarations.
+registry/tools/developer/regex-visualizer/components/RegexVisualizer.tsx(4,10): error TS2305: Module '"@/registry/tools/developer/regex-visualizer/engine"' has no exported member 'testRegex'.
+registry/tools/developer/regex-visualizer/components/RegexVisualizer.tsx(4,21): error TS2305: Module '"@/registry/tools/developer/regex-visualizer/engine"' has no exported member 'validateRegex'.
+registry/tools/developer/regex-visualizer/components/RegexVisualizer.tsx(4,36): error TS2305: Module '"@/registry/tools/developer/regex-visualizer/engine"' has no exported member 'RegexMatch'.
+registry/tools/developer/regex-visualizer/components/RegexVisualizer.tsx(41,13): error TS7006: Parameter 'm' implicitly has an 'any' type.
+registry/tools/developer/regex-visualizer/components/RegexVisualizer.tsx(41,16): error TS7006: Parameter 'i' implicitly has an 'any' type.
+registry/tools/developer/regex-visualizer/components/RegexVisualizer.tsx(174,42): error TS7006: Parameter 'match' implicitly has an 'any' type.
+registry/tools/developer/regex-visualizer/components/RegexVisualizer.tsx(174,49): error TS7006: Parameter 'idx' implicitly has an 'any' type.
+registry/tools/developer/regex-visualizer/components/RegexVisualizer.tsx(193,48): error TS7006: Parameter 'group' implicitly has an 'any' type.
+registry/tools/developer/regex-visualizer/components/RegexVisualizer.tsx(193,55): error TS7006: Parameter 'gIdx' implicitly has an 'any' type.
+registry/tools/documents/collaborative-notepad/components/CollaborativeNotepad.tsx(5,10): error TS2305: Module '"@/registry/tools/documents/collaborative-notepad/engine"' has no exported member 'getTextStats'.
+registry/tools/documents/collaborative-notepad/engine.ts(1,10): error TS2303: Circular definition of import alias 'decodeBase64'.
+registry/tools/documents/collaborative-notepad/engine.ts(1,10): error TS2459: Module '"@/registry/tools/documents/collaborative-notepad/engine"' declares 'decodeBase64' locally, but it is not exported.
+registry/tools/documents/collaborative-notepad/engine.ts(1,24): error TS2303: Circular definition of import alias 'encodeBase64'.
+registry/tools/documents/collaborative-notepad/engine.ts(1,24): error TS2459: Module '"@/registry/tools/documents/collaborative-notepad/engine"' declares 'encodeBase64' locally, but it is not exported.
+registry/tools/documents/html-to-pdf/components/HtmlToPdf.tsx(4,10): error TS2305: Module '"@/registry/tools/documents/html-to-pdf/engine"' has no exported member 'htmlElementToPdfBlob'.
+registry/tools/documents/image-to-pdf/components/ImageToPdf.tsx(4,10): error TS2305: Module '"@/registry/tools/documents/image-to-pdf/engine"' has no exported member 'imagesToPdf'.
+registry/tools/documents/image-to-pdf/components/ImageToPdf.tsx(4,23): error TS2305: Module '"@/registry/tools/documents/image-to-pdf/engine"' has no exported member 'pdfBytesToBlob'.
+registry/tools/documents/image-to-pdf/components/ImageToPdf.tsx(5,10): error TS2305: Module '"@/registry/tools/documents/image-to-pdf/engine"' has no exported member 'formatBytes'.
+registry/tools/documents/markdown-to-pdf/components/MarkdownToPdf.tsx(5,10): error TS2305: Module '"@/registry/tools/documents/markdown-to-pdf/engine"' has no exported member 'htmlElementToPdfBlob'.
+registry/tools/documents/pdf-compress/components/PdfCompress.tsx(4,10): error TS2305: Module '"@/registry/tools/documents/pdf-compress/engine"' has no exported member 'optimizePdf'.
+registry/tools/documents/pdf-compress/components/PdfCompress.tsx(4,23): error TS2305: Module '"@/registry/tools/documents/pdf-compress/engine"' has no exported member 'pdfBytesToBlob'.
+registry/tools/documents/pdf-compress/components/PdfCompress.tsx(5,10): error TS2305: Module '"@/registry/tools/documents/pdf-compress/engine"' has no exported member 'formatBytes'.
+registry/tools/documents/pdf-merge/components/PdfMerge.tsx(4,10): error TS2305: Module '"@/registry/tools/documents/pdf-merge/engine"' has no exported member 'mergePdfs'.
+registry/tools/documents/pdf-merge/components/PdfMerge.tsx(4,21): error TS2305: Module '"@/registry/tools/documents/pdf-merge/engine"' has no exported member 'pdfBytesToBlob'.
+registry/tools/documents/pdf-merge/components/PdfMerge.tsx(5,10): error TS2305: Module '"@/registry/tools/documents/pdf-merge/engine"' has no exported member 'formatBytes'.
+registry/tools/documents/pdf-split/components/PdfSplit.tsx(5,3): error TS2305: Module '"@/registry/tools/documents/pdf-split/engine"' has no exported member 'extractPdfPageRange'.
+registry/tools/documents/pdf-split/components/PdfSplit.tsx(6,3): error TS2305: Module '"@/registry/tools/documents/pdf-split/engine"' has no exported member 'getPdfPageCount'.
+registry/tools/documents/pdf-split/components/PdfSplit.tsx(7,3): error TS2305: Module '"@/registry/tools/documents/pdf-split/engine"' has no exported member 'pdfBytesToBlob'.
+registry/tools/documents/pdf-split/components/PdfSplit.tsx(8,3): error TS2305: Module '"@/registry/tools/documents/pdf-split/engine"' has no exported member 'splitPdfToSinglePages'.
+registry/tools/documents/pdf-split/components/PdfSplit.tsx(10,10): error TS2305: Module '"@/registry/tools/documents/pdf-split/engine"' has no exported member 'formatBytes'.
+registry/tools/documents/pdf-split/components/PdfSplit.tsx(72,24): error TS7006: Parameter 'o' implicitly has an 'any' type.
+registry/tools/documents/pdf-to-image/components/PdfToImage.tsx(4,10): error TS2305: Module '"@/registry/tools/documents/pdf-to-image/engine"' has no exported member 'getPdfPageCount'.
+registry/tools/documents/pdf-to-image/components/PdfToImage.tsx(4,27): error TS2305: Module '"@/registry/tools/documents/pdf-to-image/engine"' has no exported member 'renderPdfPageToPng'.
+registry/tools/documents/pdf-to-image/components/PdfToImage.tsx(5,10): error TS2305: Module '"@/registry/tools/documents/pdf-to-image/engine"' has no exported member 'formatBytes'.
+registry/tools/documents/simple-text-editor/components/SimpleTextEditor.tsx(4,10): error TS2305: Module '"@/registry/tools/documents/simple-text-editor/engine"' has no exported member 'getTextStats'.
+registry/tools/documents/simple-text-editor/components/SimpleTextEditor.tsx(4,24): error TS2305: Module '"@/registry/tools/documents/simple-text-editor/engine"' has no exported member 'downloadTextFile'.
+registry/tools/documents/spreadsheet-editor/components/SpreadsheetEditor.tsx(5,10): error TS2305: Module '"@/registry/tools/documents/spreadsheet-editor/engine"' has no exported member 'downloadTextFile'.
+registry/tools/formatting/markdown-html/components/MarkdownEditor.tsx(4,10): error TS2305: Module '"@/registry/tools/formatting/markdown-html/engine"' has no exported member 'convertMarkdown'.
+registry/tools/formatting/markdown-preview/components/MarkdownPreview.tsx(4,10): error TS2305: Module '"@/registry/tools/formatting/markdown-preview/engine"' has no exported member 'convertMarkdown'.
+registry/tools/image/gif-resizer/components/GifResizer.tsx(4,10): error TS2305: Module '"@/registry/tools/image/gif-resizer/engine"' has no exported member 'resizeImage'.
+registry/tools/image/image-compressor/components/ImageCompressor.tsx(4,10): error TS2305: Module '"@/registry/tools/image/image-compressor/engine"' has no exported member 'compressImage'.
+registry/tools/image/image-compressor/components/ImageCompressor.tsx(4,25): error TS2305: Module '"@/registry/tools/image/image-compressor/engine"' has no exported member 'formatBytes'.
+registry/tools/image/image-cropper/components/ImageCropper.tsx(4,10): error TS2305: Module '"@/registry/tools/image/image-cropper/engine"' has no exported member 'cropImage'.
+registry/tools/image/image-cropper/components/ImageCropper.tsx(4,26): error TS2305: Module '"@/registry/tools/image/image-cropper/engine"' has no exported member 'CropRect'.
+registry/tools/image/image-cropper/components/ImageCropper.tsx(113,30): error TS7006: Parameter 'c' implicitly has an 'any' type.
+registry/tools/image/image-cropper/components/ImageCropper.tsx(129,30): error TS7006: Parameter 'c' implicitly has an 'any' type.
+registry/tools/image/image-cropper/components/ImageCropper.tsx(145,30): error TS7006: Parameter 'c' implicitly has an 'any' type.
+registry/tools/image/image-cropper/components/ImageCropper.tsx(161,30): error TS7006: Parameter 'c' implicitly has an 'any' type.
+registry/tools/image/image-metadata-viewer/components/ImageMetadataViewer.tsx(5,10): error TS2305: Module '"@/registry/tools/image/image-metadata-viewer/engine"' has no exported member 'formatBytes'.
+registry/tools/image/image-resizer/components/ImageResizer.tsx(4,10): error TS2305: Module '"@/registry/tools/image/image-resizer/engine"' has no exported member 'resizeImage'.
+registry/tools/image/image-resizer/components/ImageResizer.tsx(4,23): error TS2305: Module '"@/registry/tools/image/image-resizer/engine"' has no exported member 'formatBytes'.
+registry/tools/image/image-rotator/components/ImageRotator.tsx(4,10): error TS2305: Module '"@/registry/tools/image/image-rotator/engine"' has no exported member 'rotateImage'.
+registry/tools/image/image-rotator/components/ImageRotator.tsx(4,28): error TS2305: Module '"@/registry/tools/image/image-rotator/engine"' has no exported member 'RotateAngle'.
+registry/tools/playground/code-playground/components/CodePlayground.tsx(4,10): error TS2305: Module '"@/registry/tools/playground/code-playground/engine"' has no exported member 'buildIframeSrcDoc'.
+registry/tools/playground/color-gradient-generator/engine.ts(1,10): error TS2303: Circular definition of import alias 'parseHex'.
+registry/tools/playground/color-gradient-generator/engine.ts(1,10): error TS2459: Module '"@/registry/tools/playground/color-gradient-generator/engine"' declares 'parseHex' locally, but it is not exported.
+registry/tools/playground/color-gradient-generator/engine.ts(1,20): error TS2303: Circular definition of import alias 'rgbToHex'.
+registry/tools/playground/color-gradient-generator/engine.ts(1,20): error TS2459: Module '"@/registry/tools/playground/color-gradient-generator/engine"' declares 'rgbToHex' locally, but it is not exported.
+registry/tools/playground/css-playground/components/CssPlayground.tsx(4,10): error TS2305: Module '"@/registry/tools/playground/css-playground/engine"' has no exported member 'buildIframeSrcDoc'.
+registry/tools/playground/html-playground/components/HtmlPlayground.tsx(4,10): error TS2305: Module '"@/registry/tools/playground/html-playground/engine"' has no exported member 'buildIframeSrcDoc'.
+registry/tools/playground/js-console-runner/components/JsConsoleRunner.tsx(4,10): error TS2305: Module '"@/registry/tools/playground/js-console-runner/engine"' has no exported member 'buildJsRunnerSrcDoc'.
+registry/tools/playground/js-console-runner/components/JsConsoleRunner.tsx(4,36): error TS2305: Module '"@/registry/tools/playground/js-console-runner/engine"' has no exported member 'JsRunnerMessage'.
+registry/tools/playground/regex-tester/components/RegexTester.tsx(4,10): error TS2305: Module '"@/registry/tools/playground/regex-tester/engine"' has no exported member 'testRegex'.
+registry/tools/playground/regex-tester/components/RegexTester.tsx(94,38): error TS7006: Parameter 'm' implicitly has an 'any' type.
+registry/tools/playground/regex-tester/components/RegexTester.tsx(94,41): error TS7006: Parameter 'i' implicitly has an 'any' type.
+registry/tools/playground/regex-tester/components/RegexTester.tsx(102,52): error TS7006: Parameter 'g' implicitly has an 'any' type.
+registry/tools/playground/regex-tester/components/RegexTester.tsx(102,55): error TS7006: Parameter 'gi' implicitly has an 'any' type.
+registry/tools/playground/sql-formatter/components/SqlFormatter.tsx(4,10): error TS2305: Module '"@/registry/tools/playground/sql-formatter/engine"' has no exported member 'formatSql'.
+registry/tools/playground/sql-visualizer/components/SqlVisualizer.tsx(4,10): error TS2305: Module '"@/registry/tools/playground/sql-visualizer/engine"' has no exported member 'parseSqlToAst'.
+registry/tools/text/text-diff-viewer/components/TextDiffViewer.tsx(4,10): error TS2305: Module '"@/registry/tools/text/text-diff-viewer/engine"' has no exported member 'computeDiff'.
+registry/tools/text/text-diff-viewer/components/TextDiffViewer.tsx(4,23): error TS2305: Module '"@/registry/tools/text/text-diff-viewer/engine"' has no exported member 'computeCharacterDiff'.
+registry/tools/text/text-diff-viewer/components/TextDiffViewer.tsx(33,13): error TS7006: Parameter 'diff' implicitly has an 'any' type.
+registry/tools/text/text-diff-viewer/components/TextDiffViewer.tsx(193,40): error TS7006: Parameter 'diff' implicitly has an 'any' type.
+registry/tools/text/text-diff-viewer/components/TextDiffViewer.tsx(193,46): error TS7006: Parameter 'idx' implicitly has an 'any' type.
+registry/tools/text/text-diff-viewer/components/TextDiffViewer.tsx(212,40): error TS7006: Parameter 'diff' implicitly has an 'any' type.
+registry/tools/text/text-diff-viewer/components/TextDiffViewer.tsx(212,46): error TS7006: Parameter 'idx' implicitly has an 'any' type.
+registry/tools/text/text-diff-viewer/components/TextDiffViewer.tsx(230,36): error TS7006: Parameter 'diff' implicitly has an 'any' type.
+registry/tools/text/text-diff-viewer/components/TextDiffViewer.tsx(230,42): error TS7006: Parameter 'idx' implicitly has an 'any' type.

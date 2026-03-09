@@ -1,0 +1,25 @@
+﻿components/home/HomeSearch.tsx(4,10): error TS1003: Identifier expected.
+components/home/HomeSearch.tsx(4,16): error TS1005: ',' expected.
+components/home/HomeSearch.tsx(4,50): error TS1128: Declaration or statement expected.
+components/home/HomeSearch.tsx(4,52): error TS1434: Unexpected keyword or identifier.
+registry/tools/crypto-gen/uuid-generator/engine.ts(11,21): error TS1005: ',' expected.
+registry/tools/crypto-gen/uuid-generator/engine.ts(12,77): error TS1005: ',' expected.
+registry/tools/documents/spreadsheet-editor/engine.ts(38,38): error TS1005: ',' expected.
+registry/tools/text/text-case-converter/components/TextCaseConverter.tsx(39,5): error TS2657: JSX expressions must have one parent element.
+registry/tools/text/text-case-converter/components/TextCaseConverter.tsx(47,32): error TS1005: ',' expected.
+registry/tools/text/text-case-converter/components/TextCaseConverter.tsx(49,13): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+registry/tools/text/text-case-converter/components/TextCaseConverter.tsx(49,14): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+registry/tools/text/text-case-converter/components/TextCaseConverter.tsx(50,11): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+registry/tools/text/text-case-converter/components/TextCaseConverter.tsx(52,13): error TS17002: Expected corresponding JSX closing tag for 'div'.
+registry/tools/text/text-case-converter/components/TextCaseConverter.tsx(53,11): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+registry/tools/text/text-case-converter/components/TextCaseConverter.tsx(96,5): error TS1005: ')' expected.
+registry/tools/text/text-case-converter/components/TextCaseConverter.tsx(97,3): error TS1109: Expression expected.
+registry/tools/text/text-sorter/components/TextSorter.tsx(29,5): error TS2657: JSX expressions must have one parent element.
+registry/tools/text/text-sorter/components/TextSorter.tsx(37,25): error TS1005: ',' expected.
+registry/tools/text/text-sorter/components/TextSorter.tsx(39,13): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+registry/tools/text/text-sorter/components/TextSorter.tsx(39,14): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+registry/tools/text/text-sorter/components/TextSorter.tsx(40,11): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+registry/tools/text/text-sorter/components/TextSorter.tsx(42,13): error TS17002: Expected corresponding JSX closing tag for 'div'.
+registry/tools/text/text-sorter/components/TextSorter.tsx(43,11): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+registry/tools/text/text-sorter/components/TextSorter.tsx(77,5): error TS1005: ')' expected.
+registry/tools/text/text-sorter/components/TextSorter.tsx(78,3): error TS1109: Expression expected.

@@ -1,4 +1,4 @@
-import { toolSummaries } from "@/lib/tools/tool-registry";
+import { allRegistryTools } from "@/registry";
 import { categories } from "@/data/categories";
 import { HomeSearch } from "@/components/home/HomeSearch";
 import { ToolCard } from "@/components/ui/ToolCard";
@@ -14,8 +14,12 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const popularTools = toolSummaries.filter((t) => t.popular);
-  const newTools = toolSummaries.filter((t) => t.new);
+  const popularTools = allRegistryTools.filter((t: import('@/registry/types').RegistryTool) => t.popular);
+  const newTools = allRegistryTools.filter((t: import('@/registry/types').RegistryTool) => t.new);
+
+  // We need to filter out the 'component' function before passing tools to HomeSearch (a Client Component)
+  // Next.js doesn't allow passing functions to Client Components unless they are Server Actions.
+  const toolsForSearch = allRegistryTools.map(({ component, ...t }) => t);
 
   return (
     <div className="container mx-auto px-4 py-12 md:py-24 max-w-6xl space-y-24 mb-16">
@@ -32,7 +36,7 @@ export default function Home() {
           Fully client-side, zero server processing.
         </h2>
         <div className="pt-8">
-          <HomeSearch tools={toolSummaries} />
+          <HomeSearch tools={toolsForSearch as any} />
         </div>
       </section>
 
@@ -45,7 +49,7 @@ export default function Home() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {popularTools.map((t) => (
+            {popularTools.map((t: import('@/registry/types').RegistryTool) => (
               <ToolCard
                 key={t.slug}
                 title={t.name}
@@ -66,7 +70,7 @@ export default function Home() {
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {newTools.map((t) => (
+              {newTools.map((t: import('@/registry/types').RegistryTool) => (
                 <ToolCard
                   key={t.slug}
                   title={t.name}

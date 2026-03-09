@@ -1,22 +1,28 @@
 "use client";
 
-import { useState } from "react";
-import { ToolSummary } from "@/lib/tools/tool-registry";
+import { useState, useMemo } from "react";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import { ToolCard } from "@/components/ui/ToolCard";
+import Fuse from "fuse.js";
 
-export function HomeSearch({ tools }: { tools: ToolSummary[] }) {
+export function HomeSearch({
+  tools,
+}: {
+  tools: import("@/registry/types").RegistryTool[];
+}) {
   const [query, setQuery] = useState("");
 
+  const fuse = useMemo(() => {
+    return new Fuse(tools, {
+      keys: ["name", "description", "category", "keywords"],
+      threshold: 0.3,
+      ignoreLocation: true,
+    });
+  }, [tools]);
+
   const filtered =
-    query.trim() === ""
-      ? []
-      : tools.filter(
-          (t) =>
-            t.name.toLowerCase().includes(query.toLowerCase()) ||
-            t.description.toLowerCase().includes(query.toLowerCase()),
-        );
+    query.trim() === "" ? [] : fuse.search(query).map((result) => result.item);
 
   return (
     <div className="relative w-full max-w-2xl mx-auto text-left">

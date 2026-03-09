@@ -1,17 +1,10 @@
-import { ToolDefinition, tools } from "./tool-registry";
+import { allRegistryTools, getRegistryTool } from "@/registry";
+import { RegistryTool } from "@/registry/types";
 
-export function getToolBySlug(slug: string): ToolDefinition | undefined {
-  return tools.find((tool) => tool.slug === slug);
+export function getToolBySlug(slug: string): RegistryTool | undefined {
+  return getRegistryTool(slug);
 }
 
-export function getToolsByCategory(category: string): ToolDefinition[] {
-  return tools.filter((tool) => tool.category === category);
-}
-
-export function getPopularTools(): ToolDefinition[] {
-  return tools.filter((tool) => tool.popular);
-}
-
-export function getAllTools(): ToolDefinition[] {
-  return tools;
+export function getAllTools(): RegistryTool[] {
+  return allRegistryTools;
 }

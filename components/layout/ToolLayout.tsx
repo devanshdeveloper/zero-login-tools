@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
-import { ToolDefinition } from "@/lib/tools/tool-registry";
+import { RegistryTool } from "@/registry/types";
 import { ChevronRight, Home } from "lucide-react";
 import Link from "next/link";
 
 interface ToolLayoutProps {
-  tool: ToolDefinition;
+  tool: RegistryTool;
   children: ReactNode;
 }
 
